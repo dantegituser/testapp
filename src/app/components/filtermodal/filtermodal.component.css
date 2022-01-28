@@ -1,0 +1,19 @@
+.backcontainer{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.45);
+  z-index: 50;
+}
+.modalfilter{
+  position: fixed;
+  top: 10vh;
+  left: 20vw;
+  width: 60vw;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+  z-index: 51;
+}

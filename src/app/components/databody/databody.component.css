@@ -1,0 +1,75 @@
+.row-table{
+  overflow-x: scroll;
+}
+.row-total{
+  text-align: right;
+  color: #011d3c;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.tabledata{
+  width:100%;
+  border-collapse:separate;
+  border-spacing: 0 10px!important;
+}
+.tabledata tr{
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.68);
+box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.68);
+height: 45px;
+display: flex;
+margin-bottom: 10px;
+align-items: center;
+}
+
+.tabledata tr th,
+.tabledata tr td{
+  text-align: left;
+  padding: 6px 10px;
+  box-sizing: border-box;
+}
+
+.tabledata tr .status{
+  flex: 0 0 20%!important;
+  width:20%!important;
+}
+.tabledata tr .supplier{
+  flex: 0 0 25%!important;
+  width:25%!important;
+}
+.tabledata tr .month{
+  flex: 0 0 10%!important;
+  width:10%!important;
+}
+.tabledata tr .phase{
+  flex: 0 0 10%!important;
+  width:10%!important;
+}
+.tabledata tr .internal{
+  flex: 0 0 20%!important;
+  width:20%!important;
+}
+.tabledata tr .amount{
+  flex: 0 0 15%!important;
+  width:15%!important;
+}
+td.status{
+  display: flex;
+  align-items: center;
+}
+td.status .badgecolor{
+  display: inline-block;
+  width:15px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+td.status .badgecolor.active{
+  background-color: #7ac943;
+}
+td.status .badgecolor.pending{
+  background-color: #3fa9f5;
+}
+td.status .badgecolor.waiting{
+  background-color: #fbb03b;
+}

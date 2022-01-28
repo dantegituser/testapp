@@ -1,0 +1,22 @@
+.header{
+  color: #011d3c;
+}
+.header .logobar{
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+.header .top{
+  background-image: url("../../../assets/img/bg.png");
+  background-repeat: repeat-x;
+  background-position:top left;
+height: 56px;
+margin-bottom: 10px;
+}
+.header .subtitle{
+  font-weight: 300;
+  font-size: 1em;
+}
+.header .title-logo{
+  font-size: 2em;
+  font-weight: bold;
+}
