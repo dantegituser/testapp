@@ -9,7 +9,8 @@ import { DatabodyComponent } from './components/databody/databody.component';
 import { FiltermodalComponent } from './components/filtermodal/filtermodal.component';
 import { MaterialModule } from './material.module';
 import { FilterPipe } from './pipes/filter.pipe';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UniquePipe } from './pipes/unique.pipe';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     SearchbarComponent,
     DatabodyComponent,
     FiltermodalComponent,
-    FilterPipe
+    FilterPipe,
+    UniquePipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,ReactiveFormsModule
+    MaterialModule,ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ export const datos: Persona[] = [
   {
     status: "Active",
   supplier: "Shanai Armitage",
-  month: "january",
+  month: "January",
   phase: "Deployment",
   order: Math.trunc(Math.random() * 60000),
   amount: 5100
@@ -24,7 +24,7 @@ export const datos: Persona[] = [
   amount: 3600
   },
   {
-    status: "Waiting Compensation",
+    status: "Active",
   supplier: "Evie-Mae Hewitt",
   month: "April",
   phase: "Research",
@@ -66,7 +66,7 @@ export const datos: Persona[] = [
   {
     status: "Pending Approval",
   supplier: "Keely Mccullough",
-  month: "march",
+  month: "March",
   phase: "Research",
   order: Math.trunc(Math.random() * 60000),
   amount: 4900
@@ -82,7 +82,7 @@ export const datos: Persona[] = [
   {
     status: "Active",
   supplier: "Alison Daniel",
-  month: "january",
+  month: "January",
   phase: "Research",
   order: Math.trunc(Math.random() * 60000),
   amount: 3600

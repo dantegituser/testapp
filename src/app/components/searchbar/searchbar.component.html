@@ -1,7 +1,8 @@
 <div class="searchbar">
-
     <div class="form-container">
-      <input type="text"  placeholder="Search for Name">
+      <form action="" (submit)="onFiltrar()" autocomplete="off">
+        <input type="text" [(ngModel)]="termino" name="termino"  placeholder="Search for Name">
+      </form>
       <mat-icon>search</mat-icon>
     </div>
 
@@ -12,11 +13,11 @@
 
   <div class="filter-list">
     <ul>
-      <li>
-        <span>Status: Active </span>
+      <li *ngFor="let item of filtersList | unique">
+        <span>{{item[0]}}: {{item[1]}} </span>
         <span><mat-icon>close</mat-icon></span>
       </li>
     </ul>
   </div>
-  <span class="clearfilters">Clear filters</span>
+  <span class="clearfilters" (click)="cleanFilters()">Clear filters</span>
 </div>

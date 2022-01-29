@@ -32,12 +32,19 @@ border:1px solid grey ;
 .clearfilters{
   margin-left: auto;
   color: #7cc1f3;
+  cursor: pointer;
+}
+.filter-list ul{
+  margin:0;
+  padding: 0;
+  display: flex;
 }
 .filter-list ul li{
   background-color: white;
   padding: 3px;
   display: flex;
   align-items: center;
+  margin-right: 5px;
 }
 .filter-list ul li span {
   font-weight: 700;

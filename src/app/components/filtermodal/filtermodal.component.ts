@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-filtermodal',
@@ -10,8 +11,7 @@ export class FiltermodalComponent implements OnInit {
 
   myform!: FormGroup;
   months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  phases = ['research', 'ideation', 'development', 'deployment']
-  status = ['active', 'pending', 'waiting'];
+  phases = ['Research', 'Ideation', 'Development', 'Deployment']
   values:any;
   @Output() close = new EventEmitter<boolean>();
   @Output() filters = new EventEmitter<any>();
@@ -21,7 +21,9 @@ export class FiltermodalComponent implements OnInit {
 
   ngOnInit(): void {
     this.myform = this.fb.group({
-      status: [''],
+      'Active':[null],
+      'Pending Approval' :[null],
+      'Waiting Compensation' :[null],
       months: [''],
       phases: [''],
     })

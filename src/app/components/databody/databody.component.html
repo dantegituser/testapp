@@ -3,7 +3,6 @@
     <span>$</span><span>145,000.00 USD</span>
   </div>
   <div class="row-table">
-
 <table class="tabledata">
   <thead>
 <tr>
@@ -16,7 +15,7 @@
 </tr>
   </thead>
   <tbody>
-<tr *ngFor="let item of data">
+<tr *ngFor="let item of data | filterPipe:innerFilters">
   <td class="status">
     <span
     [ngClass]="{'active': item.status === 'Active','pending': item.status === 'Pending Approval','waiting': item.status === 'Waiting Compensation'}"
@@ -27,7 +26,7 @@
   <td class="month">{{item.month}}</td>
   <td class="phase">{{item.phase}}</td>
   <td class="internal">{{item.order}}</td>
-  <td class="amount">{{item.amount}} (USD)</td>
+  <td class="amount">{{item.amount | currency}} (USD)</td>
 </tr>
 
 <!-- <tr>

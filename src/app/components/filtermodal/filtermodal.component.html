@@ -10,19 +10,15 @@
   <div class="checkboxcont">
     <div>Status</div>
     <div class="checkbox_items">
-      <mat-checkbox formControlName="status" *ngFor="let check of status" [value]="check">{{check}}</mat-checkbox>
-      <!-- <mat-checkbox formControlName="pending">Pending Approval</mat-checkbox>
-      <mat-checkbox formControlName="waiting">Waiting Compensation</mat-checkbox> -->
+      <mat-checkbox formControlName="Active">Active</mat-checkbox>
+      <mat-checkbox formControlName="Pending Approval">Pending Approval</mat-checkbox>
+      <mat-checkbox formControlName="Waiting Compensation">Waiting Compensation</mat-checkbox>
     </div>
   </div>
   <div class="selectcontain">
     <div class="selectitem">
 
       <label for="">Phase</label>
-      <!-- <select name="" id="" multiple>
-        <option value="" disabled selected>Select one or more phases</option>
-        <option value="">uno</option>
-      </select> -->
       <mat-form-field class="mat-form-field-cont">
   <mat-select placeholder="Select one or more phases"  multiple formControlName="phases">
     <mat-option  *ngFor="let phase of phases" [value]="phase">{{phase}}</mat-option>
