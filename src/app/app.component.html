@@ -1,6 +1,6 @@
-<app-filtermodal></app-filtermodal>
+<app-filtermodal *ngIf="isFiltering" (filters)="filterChanged($event)" (close)="onHandleModal($event)"></app-filtermodal>
 <app-header></app-header>
 <main id="databody">
-  <app-searchbar></app-searchbar>
+  <app-searchbar (open)="onOpenModal($event)"></app-searchbar>
   <app-databody></app-databody>
 </main>

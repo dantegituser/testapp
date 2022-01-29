@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-filtermodal',
@@ -7,9 +8,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltermodalComponent implements OnInit {
 
-  constructor() { }
+  myform!: FormGroup;
+  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  phases = ['research', 'ideation', 'development', 'deployment']
+  status = ['active', 'pending', 'waiting'];
+  values:any;
+  @Output() close = new EventEmitter<boolean>();
+  @Output() filters = new EventEmitter<any>();
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.myform = this.fb.group({
+      status: [''],
+      months: [''],
+      phases: [''],
+    })
+  }
+  onClose(){
+    this.close.emit(true);
+  }
+
+  onSubmit(){
+    this.values = {...this.myform.value}
+    this.filters.emit(this.values)
+    this.onClose()
+
+  }
+
+  changemonth(event:any){
+    if(event.isUserInput){
+      this.myform.get('months')?.setValue(event.source.value)
+    }
+  }
+  changephase(event:any){
+    if(event.isUserInput){
+      this.myform.get('phases')?.setValue(event.source.value)
+    }
   }
 
 }

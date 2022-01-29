@@ -16,47 +16,28 @@
 </tr>
   </thead>
   <tbody>
-<tr>
+<tr *ngFor="let item of data">
   <td class="status">
-    <span class="badgecolor active">&nbsp;</span>
-    <span>Nombnre completo</span>
+    <span
+    [ngClass]="{'active': item.status === 'Active','pending': item.status === 'Pending Approval','waiting': item.status === 'Waiting Compensation'}"
+    class="badgecolor">&nbsp;</span>
+    <span>{{item.status}}</span>
   </td>
-  <td class="supplier">Supplier Name</td>
-  <td class="month">Montd</td>
-  <td class="phase">Phase</td>
-  <td class="internal">Internal Order</td>
-  <td class="amount">Amount (USD)</td>
+  <td class="supplier">{{item.supplier}}</td>
+  <td class="month">{{item.month}}</td>
+  <td class="phase">{{item.phase}}</td>
+  <td class="internal">{{item.order}}</td>
+  <td class="amount">{{item.amount}} (USD)</td>
 </tr>
-<tr>
-  <td class="status">
-    <span class="badgecolor pending">&nbsp;</span>
-    <span>Nombnre completo</span>
-  </td>
-  <td class="supplier">Supplier Name</td>
-  <td class="month">Montd</td>
-  <td class="phase">Phase</td>
-  <td class="internal">Internal Order</td>
-  <td class="amount">Amount (USD)</td>
-</tr>
-<tr>
-  <td class="status">
-    <span class="badgecolor waiting">&nbsp;</span>
-    <span>Nombnre completo</span>
-  </td>
-  <td class="supplier">Supplier Name</td>
-  <td class="month">Montd</td>
-  <td class="phase">Phase</td>
-  <td class="internal">Internal Order</td>
-  <td class="amount">Amount (USD)</td>
-</tr>
-<tr>
+
+<!-- <tr>
   <td class="status">Status</td>
   <td class="supplier">Supplier Name</td>
   <td class="month">Montd</td>
   <td class="phase">Phase</td>
   <td class="internal">Internal Order</td>
   <td class="amount">Amount (USD)</td>
-</tr>
+</tr> -->
 
 
 

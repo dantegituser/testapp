@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-searchbar',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent implements OnInit {
-
+  @Output() open = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+  openFilters(){
+    this.open.emit(true)
   }
 
 }

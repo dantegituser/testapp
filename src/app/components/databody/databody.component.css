@@ -73,3 +73,9 @@ td.status .badgecolor.pending{
 td.status .badgecolor.waiting{
   background-color: #fbb03b;
 }
+@media screen and (max-width: 360px){
+td.status .badgecolor{
+  flex: 1 0 auto;
+  width: 10px;
+}
+}

@@ -8,6 +8,8 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { DatabodyComponent } from './components/databody/databody.component';
 import { FiltermodalComponent } from './components/filtermodal/filtermodal.component';
 import { MaterialModule } from './material.module';
+import { FilterPipe } from './pipes/filter.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,13 @@ import { MaterialModule } from './material.module';
     HeaderComponent,
     SearchbarComponent,
     DatabodyComponent,
-    FiltermodalComponent
+    FiltermodalComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

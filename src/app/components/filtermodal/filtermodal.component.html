@@ -1,4 +1,47 @@
-<div class="backcontainer"></div>
+<div class="backcontainer" (click)="onClose()"></div>
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
 <div class="modalfilter">
-  contenido
+  <div class="closefilters">
+    <mat-icon  (click)="onClose()">close</mat-icon>
+  </div>
+  <div class="filter-title">
+    Filter Expenses
+  </div>
+  <div class="checkboxcont">
+    <div>Status</div>
+    <div class="checkbox_items">
+      <mat-checkbox formControlName="status" *ngFor="let check of status" [value]="check">{{check}}</mat-checkbox>
+      <!-- <mat-checkbox formControlName="pending">Pending Approval</mat-checkbox>
+      <mat-checkbox formControlName="waiting">Waiting Compensation</mat-checkbox> -->
+    </div>
+  </div>
+  <div class="selectcontain">
+    <div class="selectitem">
+
+      <label for="">Phase</label>
+      <!-- <select name="" id="" multiple>
+        <option value="" disabled selected>Select one or more phases</option>
+        <option value="">uno</option>
+      </select> -->
+      <mat-form-field class="mat-form-field-cont">
+  <mat-select placeholder="Select one or more phases"  multiple formControlName="phases">
+    <mat-option  *ngFor="let phase of phases" [value]="phase">{{phase}}</mat-option>
+  </mat-select>
+</mat-form-field>
+    </div>
+    <div class="selectitem">
+
+      <label for="">Month</label>
+      <mat-form-field class="mat-form-field-cont">
+  <mat-select placeholder="Select one or more months"  multiple formControlName="months">
+    <mat-option  *ngFor="let month of months" [value]="month">{{month}}</mat-option>
+  </mat-select>
+</mat-form-field>
+    </div>
+  </div>
+  <div class="actions">
+    <button mat-stroked-button color="primary" (click)="onClose()">Cancel</button>
+    <button type="submit" mat-raised-button color="primary">Apply</button>
+  </div>
 </div>
+</form>

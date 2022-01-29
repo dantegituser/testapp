@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cemexapp';
+  isFiltering = false;
+  filtersData = [];
+
+  onHandleModal(event: boolean){
+    this.isFiltering = false;
+  }
+  onOpenModal(event: boolean){
+    this.isFiltering = true;
+  }
+  filterChanged(event:any){
+    console.log(event);
+  }
+  pushFilters(){
+
+  }
 }

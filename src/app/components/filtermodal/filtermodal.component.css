@@ -12,8 +12,68 @@
   top: 10vh;
   left: 20vw;
   width: 60vw;
-  padding: 16px;
+  padding: 20px;
   background: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.26);
-  z-index: 51;
+  z-index: 60;
+}
+.closefilters{
+  text-align: right;
+  color: #7cc1f3;
+}
+.closefilters mat-icon{
+  cursor: pointer;
+}
+
+.filter-title{
+  font-size: 2em;
+  color: #011d3c;
+  margin-bottom: 2rem;
+}
+.checkboxcont {
+margin-bottom: 1rem;
+}
+.checkbox_items .mat-checkbox{
+  margin-right: 20px;
+}
+.selectcontain{
+  display:flex;
+  margin-bottom: 3rem;
+}
+.selectcontain .selectitem{
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 30%;
+  margin-right: 1rem;
+}
+
+.selectitem .mat-form-field-cont{
+  background-color: white;
+  border: 1px solid gray;
+  padding: 4px;
+}
+::ng-deep .mat-form-field-cont .mat-select-arrow-wrapper{
+  color: #7cc1f3!important;
+}
+::ng-deep .selectitem .mat-form-field-cont .mat-form-field-infix {
+  border-top: 0!important;
+}
+.actions{
+  text-align: right;
+}
+.actions button{
+  margin-left: 10px;
+}
+@media screen and (max-width: 360px){
+  .selectcontain{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.modalfilter{
+  top: 7vh;
+  left: 10vw;
+  width: 70vw;
+  padding: 20px;
+}
 }

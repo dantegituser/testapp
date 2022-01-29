@@ -15,6 +15,7 @@ border:1px solid grey ;
 .filters{
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .filters *{
   color: #7cc1f3;
@@ -49,4 +50,15 @@ border:1px solid grey ;
 }
 ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline{
   height: 0!important;
+}
+@media screen and (max-width: 360px){
+
+  .searchbar{
+    flex-direction: column;
+    height: auto;
+  }
+  .filter-list ul{
+    padding-left: 0;
+  }
+
 }
