@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-## nom install
+## npm install
 
 Run npm install to install dependencies
 
