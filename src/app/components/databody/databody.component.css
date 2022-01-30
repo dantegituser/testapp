@@ -77,5 +77,33 @@ td.status .badgecolor.waiting{
 td.status .badgecolor{
   flex: 1 0 auto;
   width: 10px;
+  max-width: 10px;
+}
+.tabledata tr {
+  width: 130%;
+}
+.tabledata tr .status{
+  flex: 0 0 15%!important;
+  width:15%!important;
+}
+.tabledata tr .supplier{
+  flex: 0 0 15%!important;
+  width:15%!important;
+}
+.tabledata tr .month{
+  flex: 0 0 15%!important;
+  width:15%!important;
+}
+.tabledata tr .phase{
+  flex: 0 0 15%!important;
+  width:15%!important;
+}
+.tabledata tr .internal{
+  flex: 0 0 15%!important;
+  width:15%!important;
+}
+.tabledata tr .amount{
+  flex: 0 0 15%!important;
+  width:15%!important;
 }
 }

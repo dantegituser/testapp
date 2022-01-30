@@ -66,6 +66,9 @@ border:1px solid grey ;
   }
   .filter-list ul{
     padding-left: 0;
+    flex-direction: column;
   }
-
+.filter-list ul li{
+  margin-bottom: 3px;
+}
 }

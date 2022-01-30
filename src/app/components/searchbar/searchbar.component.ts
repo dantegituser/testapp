@@ -27,7 +27,6 @@ export class SearchbarComponent implements OnInit {
       this.filtersList = data
     })
     this.recommendationArray = datos.map(persona => {
-      // console.log(persona);
       let array = []
       for(let valor of Object.values(persona)){
        array.push(valor.toString())
@@ -36,9 +35,6 @@ export class SearchbarComponent implements OnInit {
     })
     let tojoin = Array.from(this.recommendationArray.flat());
     this.recommendationArray = [...new Set(tojoin)]
-    console.log(this.recommendationArray);
-
-
   }
   openFilters(){
     this.open.emit(true)
